@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F4F0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- HEADER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_shield"
+                app:tint="#1A6B3C"
+                android:contentDescription="logo" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="DGAP SENEGAL"
+                android:textColor="#1A6B3C"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_account_circle"
+                android:background="@drawable/circle_bg"
+                android:contentDescription="profil" />
+        </LinearLayout>
+
+        <!-- BOUTON RETOUR -->
+        <Button
+            android:id="@+id/btn_retour"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="← Retour au Tableau de Bord"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:background="@drawable/btn_outline_rounded"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- PHOTO GRANDE -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_marginBottom="16dp">
+
+            <!-- BADGE IDENTITÉ CONFIRMÉE -->
+            <ImageView
+                android:id="@+id/img_detenu_full"
+                android:layout_width="match_parent"
+                android:layout_height="285sp"
+                android:background="#333333"
+                android:contentDescription="photo détenu"
+                android:scaleType="centerCrop"
+                android:src="@drawable/m_a_n"
+                app:shapeAppearanceOverlay="@drawable/photo_bg" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="12dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/badge_confirmed_bg"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_check_circle"
+                    app:tint="#FFFFFF"
+                    android:contentDescription="confirmé"
+                    android:layout_marginEnd="6dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IDENTITÉ CONFIRMÉE"
+                    android:textColor="#FFFFFF"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.05"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- CARD INFO PRINCIPALE -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DÉTAILS DE L'INDIVIDU"
+                    android:textColor="#888888"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.12"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/txt_nom_famille"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NDIAYE"
+                    android:textColor="#1A1A1A"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/txt_prenom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mamadou Abdoulaye"
+                    android:textColor="#1A6B3C"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- LIGNE IDENTIFIANT + STATUT -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:background="@drawable/info_cell_bg"
+                        android:padding="12dp"
+                        android:layout_marginEnd="6dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="NUMÉRO\nD'IDENTIFICATION"
+                            android:textColor="#888888"
+                            android:textSize="9sp"
+                            android:letterSpacing="0.05"
+                            android:layout_marginBottom="4dp"/>
+
+                        <TextView
+                            android:id="@+id/txt_numero_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="IND-2024-\n8892"
+                            android:textColor="#1A1A1A"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:background="@drawable/info_cell_bg"
+                        android:padding="12dp"
+                        android:layout_marginStart="6dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="STATUT ACTUEL"
+                            android:textColor="#888888"
+                            android:textSize="9sp"
+                            android:letterSpacing="0.05"
+                            android:layout_marginBottom="4dp"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <View
+                                android:layout_width="8dp"
+                                android:layout_height="8dp"
+                                android:background="@drawable/dot_green"
+                                android:layout_marginEnd="6dp"/>
+
+                            <TextView
+                                android:id="@+id/txt_statut"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Prévenu"
+                                android:textColor="#1A1A1A"
+                                android:textSize="15sp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CARD DATE ECROU -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_calendar"
+                    app:tint="#006930"
+                    android:contentDescription="date"
+                    android:layout_marginEnd="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DERNIER DATE D'ÉCROU"
+                        android:textColor="#888888"
+                        android:textSize="10sp"
+                        android:letterSpacing="0.1"
+                        android:layout_marginBottom="4dp"/>
+
+                    <TextView
+                        android:id="@+id/txt_date_ecrou"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="14 Mars 2024"
+                        android:textColor="#1A1A1A"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/txt_etablissement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Établissement: Rebeuss"
+                        android:textColor="#666666"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CARD CHEF INCULPATION -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            android:background="@drawable/photo_bg"
+            app:cardBackgroundColor="#FFFFFF"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_gavel"
+                    app:tint="#555555"
+                    android:contentDescription="inculpation"
+                    android:layout_marginEnd="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CHEF D'INCULPATION"
+                        android:textColor="#888888"
+                        android:textSize="10sp"
+                        android:letterSpacing="0.1"
+                        android:layout_marginBottom="4dp"/>
+
+                    <TextView
+                        android:id="@+id/txt_inculpation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Délit de flagrance"
+                        android:textColor="#1A1A1A"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/txt_chambre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chambre 04"
+                        android:textColor="#666666"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- BTN NOUVEL ENROLEMENT -->
+        <Button
+            android:id="@+id/btn_enrolement"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="NOUVEL ENRÔLEMENT BIOMÉTRIQUE"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05"
+            android:background="@drawable/btn_green_rounded"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- BOUTONS SECONDAIRES -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginBottom="24dp">
+
+            <Button
+                android:id="@+id/btn_fiche_ecrou"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="Fiche d'écrou"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:background="@drawable/btn_outline_rounded"/>
+
+            <Button
+                android:id="@+id/btn_signaler_incident"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="Signaler Incident"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:background="@drawable/btn_red_rounded"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

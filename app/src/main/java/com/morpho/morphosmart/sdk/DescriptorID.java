@@ -1,0 +1,38 @@
+package com.morpho.morphosmart.sdk;
+
+/* JADX INFO: loaded from: classes.dex */
+public enum DescriptorID {
+    BINDESC_CUSTOM_DESCRIPTOR(195),
+    BINDESC_FLASH_SIZE(183),
+    BINDESC_LICENSES(191),
+    BINDESC_MAX_DB(118),
+    BINDESC_MAX_USER(117),
+    BINDESC_OEM_PID(187),
+    BINDESC_OEM_SN(188),
+    BINDESC_PID(185),
+    BINDESC_PRODUCT_NAME(184),
+    BINDESC_SENSOR_ID(189),
+    BINDESC_SENSOR_SN(190),
+    BINDESC_SN(186),
+    BINDESC_SOFT(182),
+    BINDESC_VERSION(116);
+
+    private int value;
+
+    /* JADX INFO: renamed from: values, reason: to resolve conflict with enum method */
+    public static DescriptorID[] valuesCustom() {
+        DescriptorID[] descriptorIDArrValuesCustom = values();
+        int length = descriptorIDArrValuesCustom.length;
+        DescriptorID[] descriptorIDArr = new DescriptorID[length];
+        System.arraycopy(descriptorIDArrValuesCustom, 0, descriptorIDArr, 0, length);
+        return descriptorIDArr;
+    }
+
+    DescriptorID(int value) {
+        this.value = value;
+    }
+
+    public int getValue() {
+        return this.value;
+    }
+}

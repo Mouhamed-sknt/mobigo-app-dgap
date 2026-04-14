@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAF8"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- HEADER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_shield"
+                android:contentDescription="logo" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:text="DGAP SÉNÉGAL"
+                android:textColor="#1A6B3C"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:src="@drawable/ic_account_circle"
+                android:background="@drawable/circle_bg"
+                android:padding="4dp"
+                android:contentDescription="profil" />
+        </LinearLayout>
+
+        <!-- Bouton Retour -->
+        <Button
+            android:id="@+id/btn_retour"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="← Retour au Tableau de Bord"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:background="@drawable/btn_green_rounded"
+            android:drawablePadding="12dp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Titre Succès -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IDENTITÉ CONFIRMÉE"
+            android:textColor="#1A6B3C"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vérification biométrique réussie - Précision optimale"
+            android:textColor="#666666"
+            android:textSize="15sp"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- Carte principale -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- Photo -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_gravity="center_horizontal"
+                    app:cardCornerRadius="90dp"
+                    app:cardElevation="4dp"
+                    android:layout_marginBottom="24dp">
+
+                    <ImageView
+                        android:id="@+id/img_photo"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/m_a_n"
+                    android:contentDescription="photo détenu"/>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Nom complet -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NOM COMPLET"
+                    android:textColor="#888888"
+                    android:textSize="12sp"
+                    android:letterSpacing="0.1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:id="@+id/txt_nom_complet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mamadou Abdoulaye NDIAYE"
+                    android:textColor="#1A1A1A"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="28dp"/>
+
+                <!-- Identifiant -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/photo_bg"
+                    android:padding="16dp"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="IDENTIFIANT NATIONAL DU DETENU"
+                        android:textColor="#888888"
+                        android:textSize="11sp"
+                        android:letterSpacing="0.08"/>
+
+                    <TextView
+                        android:id="@+id/txt_identifiant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="IND-2024-8892"
+                        android:textColor="#1A6B3C"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <!-- Date de naissance -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/photo_bg"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DATE DE NAISSANCE"
+                        android:textColor="#888888"
+                        android:textSize="11sp"
+                        android:letterSpacing="0.08"/>
+
+                    <TextView
+                        android:id="@+id/txt_date_naissance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="14 MAI 1917"
+                        android:textColor="#1A1A1A"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Boutons actions -->
+        <Button
+            android:id="@+id/btn_voir_fiche"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="📄 Voir la fiche complète"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:background="@drawable/btn_green_rounded"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btn_nouvelle_verif"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="↺ Nouvelle vérification"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:background="@drawable/btn_outline_rounded"/>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

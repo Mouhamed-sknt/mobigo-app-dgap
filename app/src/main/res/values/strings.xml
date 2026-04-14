@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">TestFingerApp</string>
+    <string name="retour">Retour</string>
+    <string name="sovereign_sentinel_protocol_v2_4">SOVEREIGN SENTINEL PROTOCOL V2.4</string>
+    <string name="profil">profil</string>
+    <string name="veuillez_poser_votre_doigt_sur_le_capteur">Veuillez poser votre doigt sur le capteur</string>
+    <string name="scan_en_cours">Scan en cours...</string>
+    <string name="analyse_des_minuties_en_cours">Analyse des minuties en cours...</string>
+    <string name="r_sultat">RÉSULTAT</string>
+    <string name="en_attente_du_scan">En attente du scan...</string>
+    <string name="type">TYPE</string>
+    <string name="qualit">QUALITÉ</string>
+    <string name="logo">logo</string>
+    <string name="dgap_s_n_gal">DGAP SÉNÉGAL</string>
+    <string name="analyse_de_l_empreinte">Analyse de l\'Empreinte</string>
+</resources>
