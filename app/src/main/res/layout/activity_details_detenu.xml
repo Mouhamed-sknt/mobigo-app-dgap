@@ -23,8 +23,7 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_shield"
-                app:tint="#1A6B3C"
+                android:src="@drawable/dgap"
                 android:contentDescription="logo" />
 
             <TextView
