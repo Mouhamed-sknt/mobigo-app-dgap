@@ -47,18 +47,23 @@
         </LinearLayout>
 
         <!-- Bouton Retour -->
-        <Button
-            android:id="@+id/btn_retour"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:text="← Retour au Tableau de Bord"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            android:background="@drawable/btn_green_rounded"
-            android:drawablePadding="12dp"
-            android:layout_marginBottom="24dp"/>
 
         <!-- Titre Succès -->
+
+        <Button
+            android:id="@+id/btn_retour"
+            style="@style/AppTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="?attr/colorOnPrimary"
+            android:drawablePadding="12dp"
+            android:text="← Retour au Tableau de Bord"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -202,12 +207,13 @@
         <Button
             android:id="@+id/btn_nouvelle_verif"
             android:layout_width="match_parent"
+            style="@style/AppTheme"
             android:layout_height="56dp"
             android:text="↺ Nouvelle vérification"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold"
-            android:background="@drawable/btn_outline_rounded"/>
+            android:backgroundTint="?attr/colorOnBackground"/>
 
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

@@ -4,6 +4,9 @@
         <item name="colorPrimary">#1A6B3C</item>
         <item name="colorPrimaryVariant">#1A6B3C</item>
         <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorOnSecondary">#B90014</item>
+        <item name="colorOnSurface">#E7E8E9</item>
+        <item name="colorOnBackground">#F3F3F5</item>
         <item name="buttonStyle">@style/Widget.MaterialComponents.Button</item>
     </style>
 </resources>

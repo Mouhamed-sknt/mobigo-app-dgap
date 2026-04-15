@@ -49,10 +49,13 @@
             android:id="@+id/btn_retour"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
+            style="@style/AppTheme"
             android:text="← Retour au Tableau de Bord"
-            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textStyle="bold"
             android:textSize="13sp"
-            android:background="@drawable/btn_outline_rounded"
+            android:backgroundTint="?attr/colorOnPrimary"
             android:layout_marginBottom="16dp"/>
 
         <!-- PHOTO GRANDE -->
@@ -368,22 +371,26 @@
                 android:layout_width="0dp"
                 android:layout_height="48dp"
                 android:layout_weight="1"
+                style="@style/AppTheme"
                 android:layout_marginEnd="8dp"
                 android:text="Fiche d'écrou"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="13sp"
-                android:background="@drawable/btn_outline_rounded"/>
+                android:textStyle="bold"
+                android:backgroundTint="?attr/colorOnSurface"/>
 
             <Button
                 android:id="@+id/btn_signaler_incident"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
+                style="@style/AppTheme"
                 android:layout_weight="1"
                 android:layout_marginStart="8dp"
                 android:text="Signaler Incident"
                 android:textColor="#FFFFFF"
                 android:textSize="13sp"
-                android:background="@drawable/btn_red_rounded"/>
+                android:textStyle="bold"
+                android:backgroundTint="?attr/colorOnSecondary"/>
         </LinearLayout>
 
     </LinearLayout>

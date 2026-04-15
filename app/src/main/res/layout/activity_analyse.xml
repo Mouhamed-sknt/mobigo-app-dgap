@@ -54,9 +54,9 @@
             android:layout_width="wrap_content"
             android:layout_height="48dp"
             android:layout_marginBottom="20dp"
-            android:background="@drawable/btn_outline_rounded"
+            android:background="@color/design_default_color_on_primary"
             android:text="← Retour au Tableau de Bord"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="14sp" />
 
         <TextView
@@ -89,6 +89,7 @@
             android:layout_marginBottom="32dp">
 
             <ImageView
+                android:id="@+id/img_status"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:src="@drawable/ic_info"
@@ -115,6 +116,7 @@
 
             <!-- Cercles de fond -->
             <View
+                android:id="@+id/circle_outer_id_1"
                 android:layout_width="280dp"
                 android:layout_height="280dp"
                 android:background="@drawable/circle_outer_green"
@@ -122,6 +124,7 @@
                 android:layout_centerInParent="true"/>
 
             <View
+                android:id="@+id/circle_outer_id_2"
                 android:layout_width="220dp"
                 android:layout_height="220dp"
                 android:background="@drawable/circle_outer_green"
@@ -141,6 +144,7 @@
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 app:tint="#1A6B3C"
+
                 android:src="@drawable/ic_fingerprint"
                 android:layout_centerInParent="true"
                 android:contentDescription="empreinte"/>

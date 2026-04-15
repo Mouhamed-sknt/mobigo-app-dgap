@@ -195,13 +195,13 @@
                     android:id="@+id/btnLaunchScan"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
+                    style="@style/AppTheme"
                     android:text="LANCER LE SCAN"
-                    android:textColor="@color/white"
-                    android:textSize="15sp"
+                    android:textColor="@color/success_green"
+                    android:backgroundTint="?attr/colorOnPrimary"
+                    android:textSize="18sp"
                     android:textStyle="bold"
                     android:letterSpacing="0.08"
-                    android:backgroundTint="@color/white"
-                    android:background="@drawable/btn_white_rounded"
                     android:drawablePadding="12dp"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
